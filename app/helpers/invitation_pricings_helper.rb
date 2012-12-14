@@ -1,0 +1,2 @@
+module InvitationPricingsHelper
+end

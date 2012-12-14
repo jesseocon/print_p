@@ -1,0 +1,16 @@
+<% rurl = request.fullpath %>
+<h1 id="f-key"
+    data-fpurl="<%= rurl %>" 
+    data-filepicker-key="<%= ENV['FILEPICKER_KEY'] %>"
+    data-post-url="<%= rurl %>">
+        Media Files
+</h1>
+<div class="row">
+    <div class="span8 offset2">
+        <p class="btn btn-large btn-primary" id="upload-files">Add files</p>
+        <ul class="assets" id="container">
+            <%= render @assets %>
+        </ul>
+    </div>
+</div>
+

@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  thank_you_card_id: 1
+  season_id: 1
+
+two:
+  thank_you_card_id: 1
+  season_id: 1

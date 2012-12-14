@@ -1,0 +1,7 @@
+<% @invitation.rsvps.each do |rsvp| %>
+    <div class="span2 related-stationary">
+        <%= link_to image_tag(rsvp.rsvpsimage(:thumb)),
+                        rsvp.rsvpsimage(:original) %>
+        <p>RSVP & Enclosure</p>
+    </div>
+<% end %>

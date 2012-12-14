@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  rsvp_id: 1
+  color_id: 1
+
+two:
+  rsvp_id: 1
+  color_id: 1

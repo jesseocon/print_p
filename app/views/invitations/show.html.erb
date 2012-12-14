@@ -1,0 +1,15 @@
+<h1><%= @invitation.name %></h1>
+<div class="row">
+    <div class="span7">        
+        <%= div_for @invitation, class: 'span6 main-image' do %>
+            <%= image_tag(@invitation.image) %>
+        <% end %>
+        <% if @invitation.matching_items_available? %>
+            <%= render 'assorted_items' %>
+        <% end %>
+        <% if @invitation.beta_invitations_available? %>
+            <%= render 'color_selection' %>
+        <% end %> 
+    </div>
+    <%= render 'quantity_options' %>  
+</div>

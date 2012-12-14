@@ -1,0 +1,10 @@
+<h1>Featured Invitations</h1>
+<div class="row">
+    <%= render @invitations %>
+</div>
+<% if @associated_invitations.count > 0 %>
+<h1>Non-Featured Invitations</h1>
+<% end %>
+<div class="row">
+    <%= render @associated_invitations %>
+</div>

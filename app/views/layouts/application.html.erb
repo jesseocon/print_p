@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PrintParlor</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= csrf_meta_tags %>
+</head>
+    <body>
+        <div class="container2">
+            <div class="container">
+                <%= yield %>
+            </div>
+        </div>
+    </body>
+    <%= javascript_include_tag "application" %>
+</html>

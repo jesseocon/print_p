@@ -1,0 +1,29 @@
+<div class="row">
+    <div class="span8 offset2" id="rsvp-form" 
+                                data-colors-url="<%= search_colors_path %>.json"
+                                data-styles-url="<%= search_styles_path %>.json"
+                                data-seasons-url="<%= search_seasons_path %>.json"
+                                data-assets-url="<%= search_assets_path %>.json">
+                                
+        <%= form_for @rsvp, :html => { :multipart => true } do |f| %>
+            <%= f.label :name %>
+            <%= f.text_field :name %>
+            
+            <%= f.label :description %>
+            <%= f.text_area :description, class: "shortbox" %>
+            
+            <%= f.label :color_tokens, "Colors" %>
+            <%= f.text_field :color_tokens, data: { load: @rsvp.colors} %>
+            
+            <%= f.label :season_tokens, "Seasons" %>
+            <%= f.text_field :season_tokens, data: { load: @rsvp.seasons } %>
+            
+            <%= f.label :style_tokens, "Styles" %>
+            <%= f.text_field :style_tokens, data: { load: @rsvp.styles} %>
+            
+            <%= f.file_field :rsvpsimage %>
+            
+            <%= f.submit class: 'btn btn-large btn-primary' %>
+        <% end %>
+    </div>
+</div>

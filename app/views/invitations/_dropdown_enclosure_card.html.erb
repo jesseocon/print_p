@@ -1,0 +1,19 @@
+<div class="separator matching-items">
+    <p>Add matching accessories:</p>
+    <h4 class="floatL">Enclosure Cards</h4>
+    <div class="floatR dropdown">
+        <%= collection_select @invitation.to_name('enclosure-cards'),
+                                :invitation_pricing_id,
+                                InvitationPricing.price_dropdown_by_cat('Enclosure Cards'),
+                                :id, :quantity_and_price,
+                                {prompt: "None"},
+                                { data:
+                                    {
+                                        get_url: "#{invitation_pricings_path}",
+                                        price: 0,
+                                    },
+                                    class: "price"
+                                    
+                                } %>
+    </div>
+</div>

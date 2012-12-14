@@ -1,0 +1,16 @@
+<div class="row">
+    <div class="span8 offset2">
+        <%= form_for @invitation_pricing do |f| %>
+            <%= f.label :quantity %>
+            <%= f.text_field :quantity %>
+            
+            <%= f.label :price %>
+            <%= f.text_field :price %>
+            
+            <%= f.label :pricing_cat_id %>
+            <%= f.collection_select :pricing_cat_id, PricingCat.order(:name), :id, :name %>
+            
+            <%= f.submit class: 'btn btn-large btn-primary' %>
+        <% end %>
+    </div>
+</div>

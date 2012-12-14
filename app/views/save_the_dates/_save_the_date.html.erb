@@ -1,0 +1,10 @@
+<div class="span4">
+    <%= link_to(image_tag(save_the_date.image.url(:thumb)),
+        save_the_date.image.url(:original), :class => "thumbnail") %>
+    <p class="invitation-title">
+        <%= link_to "#{save_the_date.name}", save_the_date_path(save_the_date) %>
+    </p>
+    <p class="invitation-description">
+        <%= link_to "#{save_the_date.description}", save_the_date_path(save_the_date) %>
+    </p>
+</div>

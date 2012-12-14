@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  fpurl: MyString
+  fp_filename: MyString
+  fp_mimetype: MyString
+  fp_isWriteable: 
+  fp_size: 1
+
+two:
+  fpurl: MyString
+  fp_filename: MyString
+  fp_mimetype: MyString
+  fp_isWriteable: 
+  fp_size: 1

@@ -1,0 +1,10 @@
+<div class="span4">
+    <%= link_to(image_tag(program.image.url(:thumb)),
+        program.image.url(:original), :class => "thumbnail") %>
+    <p class="invitation-title">
+        <%= link_to "#{program.name}", program_path(program) %>
+    </p>
+    <p class="invitation-description">
+        <%= link_to "#{program.description}", program_path(program) %>
+    </p>
+</div>

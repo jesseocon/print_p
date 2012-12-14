@@ -1,0 +1,7 @@
+<% @invitation.thank_you_cards.each do |thank_you_card| %>
+    <div class="span2 related-stationary">
+        <%= link_to image_tag(thank_you_card.tyimage(:thumb)),
+                        thank_you_card.tyimage(:original) %>
+        <p>Thank You Card</p>
+    </div>
+<% end %>

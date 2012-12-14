@@ -1,0 +1,9 @@
+<h1>Invitation Pricing</h1>
+<div class="row">
+    <div class="span8 offset2">
+        <p><%= link_to "New Price", new_invitation_pricing_path, class: 'btn btn-primary' %></p>
+        <ul>
+            <%= render @invitation_pricings %>
+        </ul>
+    </div>
+</div>

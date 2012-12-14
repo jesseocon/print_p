@@ -1,0 +1,7 @@
+<div class="span6 assorted-items-title"><p>COLOR SELECTION</p></div>
+<div class="span7 assorted-items">
+    <div class="span2 related-stationary" id="invitation_thumb_<%= @invitation.id %>">
+        <%= link_to image_tag(@invitation.image(:thumb)), @invitation.image(:original) %>
+    </div>
+    <%= render 'beta_invitations' %>
+</div>

@@ -1,0 +1,29 @@
+<div class="row">
+    <div class="span8 offset2" id="program-form" 
+                                data-colors-url="<%= search_colors_path %>.json"
+                                data-styles-url="<%= search_styles_path %>.json"
+                                data-seasons-url="<%= search_seasons_path %>.json"
+                                data-assets-url="<%= search_assets_path %>.json">
+                                
+        <%= form_for @program, :html => { :multipart => true } do |f| %>
+            <%= f.label :name %>
+            <%= f.text_field :name %>
+            
+            <%= f.label :description %>
+            <%= f.text_area :description %>
+            
+            <%= f.label :color_tokens %>
+            <%= f.text_field :color_tokens, data: { load: @program.colors} %>
+            
+            <%= f.label :season_tokens %>
+            <%= f.text_field :season_tokens, data: { load: @program.seasons } %>
+            
+            <%= f.label :style_tokens %>
+            <%= f.text_field :style_tokens, data: { load: @program.styles} %>
+            
+            <%= f.file_field :image %>
+            
+            <%= f.submit class: 'btn btn-large btn-primary' %>
+        <% end %>
+    </div>
+</div>

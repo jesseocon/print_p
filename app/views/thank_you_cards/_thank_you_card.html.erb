@@ -1,0 +1,10 @@
+<div class="span4">
+    <%= link_to(image_tag(thank_you_card.tyimage.url(:thumb)), 
+        thank_you_card.tyimage.url(:original), :class => "thumbnail") %>
+    <p class="invitation-title">
+        <%= link_to "#{thank_you_card.name}", thank_you_card_path(thank_you_card) %>
+    </p>
+    <p class="invitation-description">
+        <%= link_to "#{thank_you_card.description}", thank_you_card_path(thank_you_card) %>
+    </p>
+</div>

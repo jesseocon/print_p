@@ -1,0 +1,6 @@
+<% @invitation.beta_invitations.each do |beta_invitation| %>
+    <div class="invitation span2 related-stationary" id="invitation_thumb_<%= beta_invitation.id %>">
+        <%= link_to image_tag(beta_invitation.image(:thumb)),
+                              beta_invitation.image(:original) %>
+    </div>
+<% end %>

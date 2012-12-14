@@ -1,0 +1,10 @@
+<% @invitation.menus.each do |menu| %>
+    <%= div_for menu, class: 'span2 related-stationary' do  %>
+    <%= link_to image_tag(menu.mimage(:thumb)),
+                    menu.mimage(:original) %>
+    <p>Wedding Day Items</p>
+    <% end %>
+<% end %>
+
+   
+

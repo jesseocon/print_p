@@ -1,0 +1,19 @@
+<div class="separator matching-items">
+    <h3 class="floatL">Quantity & Options</h3>
+    <div class="floatR dropdown">
+        <%= form_for @invitation do |f| %>
+            <%= f.collection_select :invitation_pricing_id, 
+                                    InvitationPricing.price_dropdown_by_cat('Invitation'),
+                                    :id, :quantity_and_price,
+                                    {}, 
+                                    {data: 
+                                        {
+                                            get_url: "#{invitation_pricings_path}",
+                                            price: 0
+                                        },
+                                        class: 'price'
+                                    } %>
+        <% end %>
+    </div>
+    <div class="perPiece"></div>
+</div>

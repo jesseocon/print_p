@@ -1,0 +1,12 @@
+<div class="span4">
+    <%= link_to(image_tag(associated_invitation.image.url(:thumb)), 
+                invitation, :class => "thumbnail") %>
+    <p class="invitation-title">
+        <%= link_to "#{associated_invitation.name}", 
+            associated_invitation_path(associated_invitation) %>
+    </p>
+    <p class="invitation-description">
+        <%= link_to "#{invitation.description}", 
+            associated_invitation_path(associated_invitation) %>
+    </p>
+</div>

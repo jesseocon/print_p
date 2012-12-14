@@ -1,0 +1,10 @@
+<div class="span4 gridview">
+    <%= link_to(image_tag(rsvp.rsvpsimage.url(:thumb)),
+        rsvp.rsvpsimage.url(:original), :class => "thumbnail") %>
+    <p class="invitation-title">
+        <%= link_to "#{rsvp.name}", rsvp_path(rsvp) %>
+    </p>
+    <p class="invitation-description">
+        <%= link_to "#{rsvp.description}", rsvp_path(rsvp) %>
+    </p>
+</div>

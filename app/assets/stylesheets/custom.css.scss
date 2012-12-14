@@ -1,0 +1,334 @@
+@import "bootstrap";
+
+/* mixins, variables, etc. */
+
+$grayMediumLight: #eaeaea;
+
+@mixin box_sizing {
+  -moz-box-sizing: border-box; 
+  -webkit-box-sizing: border-box; 
+  box-sizing: border-box;
+}
+
+/* universal */
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  padding-top: 20px;
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.center {
+  text-align: center;
+  h1 {
+    margin-bottom: 10px;
+  }
+}
+
+
+div.container2 {
+    width: 1000px;
+    margin: auto;
+    background: white;
+}
+
+/* miscellaneous */
+
+.debug_dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+  @include box_sizing;
+}
+
+/* typography */
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+}
+
+h1 {
+  font-size: 3em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.7em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+  color: $grayLight;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.7em;
+}
+
+div.container { 
+    background: white;
+}
+
+.floatL {
+   float: left; 
+}
+
+.floatR {
+    float: right;
+    margin-bottom: 0px;
+}
+
+
+/* header */
+
+#logo {
+  float: left;
+  margin-right: 10px;
+  font-size: 1.7em;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: bold;
+  line-height: 1;
+  &:hover {
+    color: white;
+    text-decoration: none;
+  }
+}
+
+/* footer */
+
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid $grayMediumLight;
+  color: $grayLight;
+  a {
+    color: $gray;
+    &:hover { 
+      color: $grayDarker;
+    }
+  }  
+  small { 
+    float: left; 
+  }
+  ul {
+    float: right;
+    list-style: none;
+    li {
+      float: left;
+      margin-left: 10px;
+    }
+  }
+}
+
+
+/* forms */
+
+input, select, .uneditable-input {
+  border: 1px solid #bbb;
+  width: 100%;
+  padding: 10px;
+  height: auto !important;
+  margin-bottom: 15px;
+  @include box_sizing;
+}
+
+.hidden {
+    display:none;
+}
+
+/* errors */
+
+#error_explanation {
+  color: #f00;
+  ul {
+    list-style: none;
+    margin: 0 0 18px 0;
+  }
+}
+
+.field_with_errors {
+  @extend .control-group;
+  @extend .error;
+ }
+ 
+/*************************Grid****************************/
+p.invitation-title {
+    font-size: 1.3em;
+    margin-bottom: 5px;
+    border-bottom: 1px solid black;
+    a { 
+        color: #A52929;
+        text-decoration: none;
+        font-weight: bold;
+    }
+}
+
+p.invitation-description {
+    font-size: 1.1em;
+    a {
+        color: black;
+        text-decoration: none;
+    }
+}
+
+div.gridview {
+    height: 420px;
+}
+
+/* assets index */
+
+.assets { 
+    list-style: none;
+    margin: 0;
+    li {
+        overflow: auto;
+        padding: 10px;
+        border-top: 1px solid black;
+        &:last-child {
+            border-bottom: 1px solid black
+        }
+    }
+    img { 
+        height: 50px;
+        width: 50px; 
+    }
+}
+
+textarea.shortbox {
+    height: 75px;
+    width: 100%;
+}
+
+/****************Products Show Page******************/
+
+div.assorted-items {
+    margin-left: 0px;
+}
+
+div.assorted-items-title {
+    margin-bottom: -22px;
+    p {
+        font-weight: bold;
+        font-size: 1.3em;
+        color: #A52929;
+    }
+}
+
+div.related-stationary {
+    padding-top: 15px;
+}
+
+div.main-image {
+    padding-bottom: 15px;
+    height: 344px;
+}
+
+div.separator {
+    padding-bottom: 25px;
+    margin-bottom: 5px;
+    border-bottom: 1px dotted #CCC;
+}
+
+div.separate {
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    span {
+        font-weight: bold;
+    }
+}
+
+
+
+#total .perPiece {
+    color: black;
+    font-weight: bold;
+}
+
+.perPiece {
+    color: #8E8765;
+    float: right;
+    text-align: right;
+    padding-right: 5px;
+}
+
+
+
+.quantity-column {
+    border: 1px solid #C3BEA8;
+    float:right;
+    margin-bottom: 10px;
+    padding:5px;
+    margin-left: 0px;
+}
+
+.total { 
+
+}
+
+
+.edit_invitation {
+    padding: 0px;
+    margin: 0px;
+    select, textarea {
+        padding: 0px;
+        margin-bottom: 0px;
+    }
+}
+
+div.matching-items { 
+    h4 {
+        color: #8E8765;
+        font-weight: normal;
+    }
+    h3 {
+        font-weight: normal;
+    }
+    p { 
+        font-weight: bold;
+        font-size: .9em;
+    }
+}
+
+div.dropdown {
+    select, textarea {
+        padding-top: 0px;
+        margin-bottom:10px;
+        margin-top: 0px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
