@@ -1,4 +1,6 @@
 PrintParlor::Application.routes.draw do
+  root to: 'invitations#index'
+  
   resources :invitations do 
     collection { get 'search' }
   end
